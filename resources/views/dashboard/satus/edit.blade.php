@@ -21,7 +21,7 @@
                             @method('put')
                             @csrf
                             <div class="col-lg-20">
-                        <table class="table table-sm table-hover m-0">
+                        <table class="table table-sm table-hover m-0 mb-3">
                             <tbody>
                                     <div class="mb-3">
                                     <tr>
@@ -283,6 +283,24 @@
                                     </tr>
 
                                     <tr>
+                                        <td class="text-muted" >Status Service Gwibslite</td>
+                                        <td>
+                                        <select name="status_service_gwibslite" class="form-control" value="{{ $c }}">
+                                            <option selected disabled>-- Pilih --</option>
+                                        @if(old('status_service_gwibslite') == $c)
+                                            <option value="Up" selected>Up</option>
+                                            <option value="Down" selected>Down</option>
+                                            <option value="Down" selected>Tidak Ada</option>
+                                        @else
+                                            <option value="Up">Up</option>
+                                            <option value="Down">Down</option>
+                                            <option value="Down">Tidak Ada</option>
+                                        @endif
+                                        </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
                                         <td class="text-muted" >Status Service Gwlkm</td>
                                         <td>
                                         <select name="status_service_gwlkm" class="form-control" value="{{ $a }}">
@@ -306,6 +324,24 @@
                                         <select name="status_service_ereg" class="form-control" value="{{ $a }}">
                                             <option selected disabled>-- Pilih --</option>
                                         @if(old('status_service_ereg')) == $b )
+                                            <option value="Up" selected>Up</option>
+                                            <option value="Down" selected>Down</option>
+                                            <option value="Down" selected>Tidak Ada</option>
+                                        @else
+                                            <option value="Up">Up</option>
+                                            <option value="Down">Down</option>
+                                            <option value="Down">Tidak Ada</option>
+                                        @endif
+                                        </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-muted" >Status Service Core</td>
+                                        <td>
+                                        <select name="status_service_ereg" class="form-control" value="{{ $v }}">
+                                            <option selected disabled>-- Pilih --</option>
+                                        @if(old('status_service_core')) == $v )
                                             <option value="Up" selected>Up</option>
                                             <option value="Down" selected>Down</option>
                                             <option value="Down" selected>Tidak Ada</option>
@@ -445,7 +481,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="text-muted" >Kode Bon VA</td>
+                                        <td class="text-muted" >Kode Prefix VA</td>
                                         <td>
                                         <input type="text" class="form-control @error('kode_bon_va') is-invalid @enderror" id="kode_bon_va" name="kode_bon_va" required autofocus value="{{ old('kode_bon_va', $satu -> kode_bon_va) }}">
                             @error('kode_bon_va')

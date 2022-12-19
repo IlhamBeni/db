@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/dashboard" class="brand-link">
-      <span class="brand-text font-weight-light">Dashboard</span>
+      <span class="brand-text font-weight-light">DASHBORD ARSIP</span>
     </a>
 
     <!-- Sidebar -->
@@ -61,6 +61,23 @@
                 <a href="/dashboard/lima" class="nav-link {{ Request::is('dashboard/lima*') ? 'active' : '' }}">
                 <i class="fa fa-arrow-right"></i>
                   <p>Sister Company</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link {{ Request::is('dashboard/laporan*') ? 'active' : '' }} ">
+              <i class="nav-icon fa fa-file"></i>
+              <p>
+                Laporan
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/dashboard/laporan" class="nav-link {{ Request::is('dashboard/laporan*') ? 'active' : '' }}">
+                  <i class="fa fa-arrow-right"></i>
+                  <p>Laporan Lembaga</p>
                 </a>
               </li>
             </ul>

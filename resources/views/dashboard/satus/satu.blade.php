@@ -10,9 +10,37 @@
     {{ session('success') }}
   </div>
 @endif
+<div class="row">
+    <div class="col-auto">
+        <a href="/dashboard/satu/create" class="btn btn-primary mb-3"><i class="fa fa-plus"></i></a>
+    </div>
+</div>
+  <form action="/dashboard/satu" method="get">
+      <div class="input-group mb-3 col-lg-5" style="margin-left: -10px;">
+        <input type="text" name="search" placeholder="Search...">
+      </div>
+  </form>
+  <style>
+input[type=text] {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
 
-    <div class="table-responsive col-lg-10">
-      <a href="/dashboard/satu/create" class="btn btn-primary mb-3"><i class="fa fa-plus"></i></a>
+input[type=text]:focus {
+  width: 100%;
+}
+  </style>
+    <div class="table-responsive col-12">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
@@ -21,13 +49,13 @@
               <th scope="col">PIC</th>
               <th scope="col">Alamat</th>
               <th scope="col">No Handphone</th>
-              <th scope="col">Action</th>
+              <th scope="col" style="min-width:100px; max-width:150">Action</th>
             </tr>
           </thead>
           <tbody>
-            @foreach ($posts as $p)
+            @foreach ($posts as $key => $p)
             <tr>
-              <td>{{ $loop -> iteration }}</td>
+              <td>{{ $posts->firstItem() + $key }}</td>
               <td>{{ $p -> nama_lembaga }}</td>
               <td>{{ $p -> nama_pic }}</td>
               <td>{{ $p -> alamat }}</td>
@@ -49,5 +77,8 @@
             @endforeach
           </tbody>
         </table>
+    </div>
+    <div class="mb-3">
+      {{ $posts->links('pagination::bootstrap-5') }}
     </div>
 @endsection

@@ -65,23 +65,50 @@
 
 <div class="col-xl-3 col-md-4">
     <div class="box">
-    <div class="card bg-danger text-white mb-4">
-        <div class="card-body mb-0">
-                Up 
-            <h2>{{ $q }}</h2>
 
-                Down 
+    <div class="card bg-danger text-white mb-4">
+        <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+        <a class="text-white stretched-link h4" style="text-decoration: none;"><b>Status Service Gwlite</b></a>
+    </div>
+        <div class="card-body mb-0">
+                Up
             <h2>
-                {{ $qq }}
+                 <b>{{ $q }}</b>
             </h2>
 
-                Tidak Ada 
+                Down
             <h2>
-                {{ $qqq }}
+                 <b>{{ $qq }}</b>
+            </h2>
+
+                Tidak Ada
+            <h2>
+                <b>{{ $qqq }}</b>
             </h2>
         </div>
-        <div class="card-footer d-flex align-items-center justify-content-between">
-            <h2 href="" class="small text-white stretched-link" style="text-decoration: none;">Status Service Gwlite</h2>
+
+    </div>
+    </div>
+</div>
+
+<div class="col-xl-3 col-md-4">
+    <div class="box">
+    <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Service Gwlkm</b></a>
+    </div>
+        <div class="card-body mb-0">
+                Up
+            <h2><b>{{ $w }}</b></h2>
+
+                Down
+            <h2>
+                <b>{{ $ww }}</b>
+            </h2>
+                Tidak Ada
+            <h2>
+                <b>{{ $www }}</b>
+            </h2>
         </div>
     </div>
     </div>
@@ -90,21 +117,21 @@
 <div class="col-xl-3 col-md-4">
     <div class="box">
     <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Service Ereg</b></a>
+    </div>
         <div class="card-body mb-0">
-                Up 
-            <h2>{{ $w }}</h2>
+                Up
+            <h2><b>{{ $e }}</b></h2>
 
-                Down 
+                Down
             <h2>
-                {{ $ww }}
+                <b>{{ $ee }}</b>
             </h2>
-                Tidak Ada 
+                Tidak Ada
             <h2>
-                {{ $www }}
+                <b>{{ $eee }}</b>
             </h2>
-        </div>
-        <div class="card-footer d-flex align-items-center justify-content-between">
-            <h2 href="" class="small text-white stretched-link" style="text-decoration: none;">Status Service Gwlkm</h2>
         </div>
     </div>
     </div>
@@ -113,21 +140,21 @@
 <div class="col-xl-3 col-md-4">
     <div class="box">
     <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Service Marketplace</b></a>
+    </div>
         <div class="card-body mb-0">
-                Up 
-            <h2>{{ $e }}</h2>
+                Up
+            <h2><b>{{ $r }}</b></h2>
 
-                Down 
+                Down
             <h2>
-                {{ $ee }}
+                <b>{{ $rr }}</b>
             </h2>
-                Tidak Ada 
+                Tidak Ada
             <h2>
-                {{ $eee }}
+                <b>{{ $rrr }}</b>
             </h2>
-        </div>
-        <div class="card-footer d-flex align-items-center justify-content-between">
-            <h2 href="" class="small text-white stretched-link" style="text-decoration: none;">Status Service Ereg</h2>
         </div>
     </div>
     </div>
@@ -136,21 +163,21 @@
 <div class="col-xl-3 col-md-4">
     <div class="box">
     <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Va</b></a>
+    </div>
         <div class="card-body mb-0">
-                Up 
-            <h2>{{ $r }}</h2>
+                Up
+            <h2><b>{{ $t }}</b></h2>
 
-                Down 
+                Down
             <h2>
-                {{ $rr }}
+                <b>{{ $tt }}</b>
             </h2>
-                Tidak Ada 
+                Tidak Ada
             <h2>
-                {{ $rrr }}
+                <b>{{ $ttt }}</b>
             </h2>
-        </div>
-        <div class="card-footer d-flex align-items-center justify-content-between">
-            <h2 href="" class="small text-white stretched-link" style="text-decoration: none;">Status Marketplace</h2>
         </div>
     </div>
     </div>
@@ -159,21 +186,21 @@
 <div class="col-xl-3 col-md-4">
     <div class="box">
     <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Kartu Santri</b></a>
+    </div>
         <div class="card-body mb-0">
-                Up 
-            <h2>{{ $t }}</h2>
+                Up
+            <h2><b>{{ $y }}</b></h2>
 
-                Down 
+                Down
             <h2>
-                {{ $tt }}
+                <b>{{ $yy }}</b>
             </h2>
-                Tidak Ada 
+                Tidak Ada
             <h2>
-                {{ $ttt }}
+                <b>{{ $yyy }}</b>
             </h2>
-        </div>
-        <div class="card-footer d-flex align-items-center justify-content-between">
-            <h2 href="" class="small text-white stretched-link" style="text-decoration: none;">Status Va</h2>
         </div>
     </div>
     </div>
@@ -182,21 +209,21 @@
 <div class="col-xl-3 col-md-4">
     <div class="box">
     <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Mikropay</b></a>
+    </div>
         <div class="card-body mb-0">
-                Up 
-            <h2>{{ $y }}</h2>
+                Up
+            <h2><b>{{ $u }}</b></h2>
 
-                Down 
+                Down
             <h2>
-                {{ $yy }}
+                <b>{{ $uu }}</b>
             </h2>
-                Tidak Ada 
+            Tidak Ada
             <h2>
-                {{ $yyy }}
+                <b>{{ $uuu }}</b>
             </h2>
-        </div>
-        <div class="card-footer d-flex align-items-center justify-content-between">
-            <h2 href="" class="small text-white stretched-link" style="text-decoration: none;">Status Kartu Santri</h2>
         </div>
     </div>
     </div>
@@ -205,21 +232,21 @@
 <div class="col-xl-3 col-md-4">
     <div class="box">
     <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Qris</b></a>
+    </div>
         <div class="card-body mb-0">
-                Up 
-            <h2>{{ $u }}</h2>
+                Up
+            <h2><b>{{ $i }}</b></h2>
 
-                Down 
+                Down
             <h2>
-                {{ $uu }}
+                <b>{{ $ii }}</b>
             </h2>
-            Tidak Ada 
+                Tidak Ada
             <h2>
-                {{ $uuu }}
+                <b>{{ $iii }}</b>
             </h2>
-        </div>
-        <div class="card-footer d-flex align-items-center justify-content-between">
-            <h2 href="" class="small text-white stretched-link" style="text-decoration: none;">Status Mikropay</h2>
         </div>
     </div>
     </div>
@@ -228,21 +255,44 @@
 <div class="col-xl-3 col-md-4">
     <div class="box">
     <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Service Gwibslite</b></a>
+    </div>
         <div class="card-body mb-0">
-                Up 
-            <h2>{{ $i }}</h2>
+                Up
+            <h2><b>{{ $c }}</b></h2>
 
-                Down 
+                Down
             <h2>
-                {{ $ii }}
+                <b>{{ $cc }}</b>
             </h2>
-                Tidak Ada 
+                Tidak Ada
             <h2>
-                {{ $iii }}
+                <b>{{ $ccc }}</b>
             </h2>
         </div>
-        <div class="card-footer d-flex align-items-center justify-content-between">
-            <h2 href="" class="small text-white stretched-link" style="text-decoration: none;">Status Qris</h2>
+    </div>
+    </div>
+</div>
+
+<div class="col-xl-3 col-md-4">
+    <div class="box">
+    <div class="card bg-danger text-white mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between bg-red small-box">
+            <a class="text-white stretched-link h4" style="text-decoration: none;"> <b>Status Service Core</b></a>
+    </div>
+        <div class="card-body mb-0">
+                Up
+            <h2><b>{{ $v }}</b></h2>
+
+                Down
+            <h2>
+                <b>{{ $vv }}</b>
+            </h2>
+                Tidak Ada
+            <h2>
+                <b>{{ $vvv }}</b>
+            </h2>
         </div>
     </div>
     </div>

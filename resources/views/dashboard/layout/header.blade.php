@@ -4,14 +4,10 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item">
-      <form action="/logout" method="post">
-        @csrf
-        <button type="submit" class="nav-link border-0 bg-white">
-            <i>LogOut</i>
-          <span data-feather="" class="align-text-bottom"></span>
-        </button>
-      </form>
+      <li class="nav-item" style="padding-top: 6px;">
+        <b class="h4 text-bold">
+          DASHBORD ARSIP
+        </b>
       </li>
     </ul>
 
@@ -33,5 +29,12 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+      <form action="/logout" method="post">
+        @csrf
+        <button type="submit" class="nav-link border-0 bg-white">
+            <i>LogOut</i>
+          <span data-feather="" class="align-text-bottom"></span>
+        </button>
+      </form>
     </ul>
   </nav>

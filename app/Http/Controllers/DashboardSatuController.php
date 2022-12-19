@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\satu;
 use App\Models\post;
 use App\Models\tiga;
 use App\Models\empat;
 use App\Models\lima;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\PaginatedResourceResponse;
 use Illuminate\Support\Facades\DB;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -20,9 +22,15 @@ class DashboardSatuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Satu $satu, Request $request)
     {
-        $posts = Satu::all();
+        $paginate = 20;
+        if($request->has('search')){
+            $posts = Satu::where('nama_lembaga','LIKE','%'.$request->search.'%')->paginate($paginate);
+        }else{
+            $posts = Satu::paginate($paginate);
+        }
+
 
         return view('dashboard/satus/satu', compact('posts'));
         // return view('dashboard/satus/satu', [
@@ -36,11 +44,13 @@ class DashboardSatuController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(satu $satu)
-    {   
+    {
         $z = Satu::find($satu)->where('type_koperasi');
         $w = Satu::find($satu)->where('status_service_gwlite');
+        $c = Satu::find($satu)->where('status_service_gwlibslite');
         $a = Satu::find($satu)->where('status_service_gwlkm');
         $b = Satu::find($satu)->where('status_service_ereg');
+        $v = Satu::find($satu)->where('status_service_core');
         $c = Satu::find($satu)->where('status_service_marketplace');
         $d = Satu::find($satu)->where('status_va');
         $e = Satu::find($satu)->where('status_kartu_santri');
@@ -60,7 +70,9 @@ class DashboardSatuController extends Controller
             'e' => $e,
             'f' => $f,
             'g' => $g,
-            'z' => $z
+            'z' => $z,
+            'c' => $c,
+            'v' => $v
         ]);
     }
 
@@ -121,7 +133,7 @@ class DashboardSatuController extends Controller
     public function show(Satu $satu)
     {
         // dd($satu['id_app_lembaga']);
-        
+
         // dd($satu);
         // $posts = Satu::findOrFail($satu)->where('id_app_lembaga');
         // $posts = Satu::findOrFail($satu)->where('id_app_lembaga');
@@ -150,15 +162,17 @@ class DashboardSatuController extends Controller
     {
         // $aw = Satu::all();
         $w = Satu::find($satu)->where('status_service_gwlite');
+        $c = Satu::find($satu)->where('status_service_gwlibslite');
         $a = Satu::find($satu)->where('status_service_gwlkm');
         $b = Satu::find($satu)->where('status_service_ereg');
+        $v = Satu::find($satu)->where('status_service_core');
         $c = Satu::find($satu)->where('status_service_marketplace');
         $d = Satu::find($satu)->where('status_va');
         $e = Satu::find($satu)->where('status_kartu_santri');
         $f = Satu::find($satu)->where('status_mikropay');
         $g = Satu::find($satu)->where('status_qris');
         $z = Satu::find($satu)->where('type_koperasi');
-        
+
         return view('dashboard.satus.edit',[
             'satu' => $satu,
             'posts' => Post::all(),
@@ -173,7 +187,9 @@ class DashboardSatuController extends Controller
             'e' => $e,
             'f' => $f,
             'g' => $g,
-            'z' => $z
+            'z' => $z,
+            'c' => $c,
+            'v' => $v
         ]);
     }
 
@@ -192,8 +208,8 @@ class DashboardSatuController extends Controller
         // $users = $validatedData->makeHidden(['id_app_lembaga']);
 
         $validatedData->each->update($request->all());
-        
-        
+
+
 
 
         return redirect('/dashboard/satu')->with('success', 'Berhasil Diedit');

@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardEmpatController;
 use App\Http\Controllers\DashboardLimaController;
 use App\Http\Controllers\DashboardShowController;
 use App\Http\Controllers\DashboardTigaController;
+use App\Http\Controllers\LaporanController;
 use GuzzleHttp\Middleware;
 
 /*
@@ -46,4 +47,11 @@ Route::resource('/dashboard/empat', DashboardEmpatController::class)->middleware
 
 Route::resource('/dashboard/lima', DashboardLimaController::class)->middleware('auth');
 
-Route::get('/dashboard/sata', [DashboardShowController::class, 'show'])->middleware('auth');
+// Route::resource('/dashboard/laporan', LaporanController::class)->middleware('auth');
+Route::resource('/dashboard/laporan', LaporanController::class)->middleware('auth');
+Route::get('/dashboard/laporan/{ref_produk}', [LaporanController::class, 'ajax'])->middleware('auth');
+
+Route::get('/exportpdf', [DashboardSatuController::class, 'exportpdf'])->middleware('auth');
+
+Route::get('/filterMultiple', [LaporanController::class, 'filterMultiple'])->middleware('auth');
+// Route::get('/exportexcel', [DashboardSatuController::class, 'exportexcel'])->middleware('auth');

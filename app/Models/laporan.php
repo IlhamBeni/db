@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class laporan extends Model
+{
+    use HasFactory;
+    protected $table = "app_lembaga";
+    protected $primaryKey = 'id_app_lembaga';
+    protected $guarded = [];
+
+
+    public function post(){
+        return $this->belongsTo(Post::class, 'ref_produk', 'id_ref_produk');
+    }
+
+    public function tiga(){
+        return $this->belongsTo(Tiga::class, 'server_service', 'id_server_service');
+    }
+
+    public function empat(){
+        return $this->belongsTo(Empat::class, 'template_ibslite', 'id_template_ibslite');
+    }
+    public function lima(){
+        return $this->belongsTo(Lima::class, 'client', 'id_sc');
+    }
+}
